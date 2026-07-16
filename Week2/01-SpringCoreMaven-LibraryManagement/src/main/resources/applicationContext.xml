@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Exercise 1 & 5: define the beans managed by the Spring IoC container -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository"/>
+
+    <!--
+        Exercise 2 & 7: Dependency Injection.
+        BookService receives its BookRepository from the container.
+        SETTER injection is shown below (uncomment the constructor line to use
+        constructor injection instead).
+    -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+        <!-- Constructor injection alternative:
+        <constructor-arg ref="bookRepository"/>
+        -->
+    </bean>
+
+</beans>

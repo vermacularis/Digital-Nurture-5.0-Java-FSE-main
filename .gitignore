@@ -1,0 +1,27 @@
+# Build output
+target/
+*.class
+bin/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs / DB
+*.log
+*.db
+
+# Node / React
+node_modules/
+dist/
+npm-debug.log*
+
+# Local source cache (not part of submission)
+_source/
+scratch/
+
